@@ -6,12 +6,17 @@ app = FastMCP("simple-mcp")
 
 @app.tool()
 def echo(message: str):
-    return [TextContent(type="text", text=f"You said: {message}")]
+return [TextContent(type="text", text=f"You said: {message}")]
 
 @app.tool()
 def add(a: int, b: int):
-    result = a + b
-    return [TextContent(type="text", text=str(result))]
+result = a + b
+return [TextContent(type="text", text=str(result))]
 
-if __name__ == "__main__":
-    uvicorn.run(app.streamable_http_app, host="0.0.0.0", port=8081)
+@app.tool()
+def multiply(a: int, b: int):
+result = a * b
+return [TextContent(type="text", text=str(result))]
+
+if **name** == "**main**":
+uvicorn.run(app.streamable_http_app, host="0.0.0.0", port=8081)
