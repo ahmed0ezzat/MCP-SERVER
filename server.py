@@ -1,4 +1,5 @@
-from mcp.server.fastmcp import FastMCP, TextContent
+from mcp.server.fastmcp import FastMCP
+from mcp.types import TextContent
 import uvicorn
 
 app = FastMCP("simple-mcp")
